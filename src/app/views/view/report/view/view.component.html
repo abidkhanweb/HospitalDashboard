@@ -1,0 +1,63 @@
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">
+            <mat-icon>home</mat-icon>
+        </a></li>
+    <li class="breadcrumb-item active">Report</li>
+</ul>
+<h1>Report</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <mat-card class="example-card bg-success">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image">
+                        <mat-icon>equalizer</mat-icon>
+                    </div>
+                    <mat-card-title>$127 526</mat-card-title>
+                    <mat-card-subtitle>Total Income</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="example-card  bg-warning">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image">
+                        <mat-icon>equalizer</mat-icon>
+                    </div>
+                    <mat-card-title>457</mat-card-title>
+                    <mat-card-subtitle>Unique Patients</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="example-card bg-primary">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image">
+                        <mat-icon>equalizer</mat-icon>
+                    </div>
+                    <mat-card-title>$125</mat-card-title>
+                    <mat-card-subtitle>Monthly Income</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="example-card  bg-info">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image">
+                        <mat-icon>equalizer</mat-icon>
+                    </div>
+                    <mat-card-title>$1 063</mat-card-title>
+                    <mat-card-subtitle>Net Profit</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-12">
+            <mat-card class="example-card">
+                <canvas baseChart width="200" height="50" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" [plugins]="lineChartPlugins"></canvas>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,136 @@
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">
+            <mat-icon>home</mat-icon>
+        </a></li>
+    <li class="breadcrumb-item active">Doctors</li>
+</ul>
+
+
+
+<div class="container-fluid">
+
+    <h1 class="d-flex bd-highlight mb-3">
+        <span class="title mr-auto">Doctors</span>
+        <span class="">
+                <a routerLink="/doctor-action" class="">
+                    <button mat-fab color="primary"
+                    aria-label="Example icon-button with a heart icon">
+                    <mat-icon>add</mat-icon>
+                    </button>
+                </a>
+        </span>
+    </h1>
+
+    <!-- Doctors -->
+    <div class="row doctors-list">
+
+        <div class="col-md-3 text-center" *ngFor="let doctor of allDoctors">
+            <mat-card class="example-card">
+                <div class="item">
+                    <span class="pro-pic">
+                        <a routerLink="/doctor-profile"><img src="{{doctor.thumb}}"></a>
+                    </span>
+                    <span class="title">{{doctor.name}}</span>
+                    <small>{{doctor.specialist}}</small>
+                    <span>{{doctor.address}}</span>
+                </div>
+            </mat-card>
+        </div>
+        <!-- <div class="col-md-3 text-center">
+            <mat-card class="example-card">
+                <div class="item">
+                    <span class="pro-pic">
+                        <a routerLink="/doctor-profile"><img src="../assets/doctor.jpg"></a>
+                    </span>
+                    <span class="title">Dr. Siddharth Kamble</span>
+                    <small>Dentist</small>
+                    <span>795 Folsom Ave, Suite 600 San Francisco, faCADGE 94107</span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3 text-center">
+            <mat-card class="example-card">
+                <div class="item">
+                    <span class="pro-pic">
+                        <a routerLink="/doctor-profile"><img src="../assets/doctor.jpg"></a>
+                    </span>
+                    <span class="title">Dr. Siddharth Kamble</span>
+                    <small>Dentist</small>
+                    <span>795 Folsom Ave, Suite 600 San Francisco, faCADGE 94107</span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3 text-center">
+            <mat-card class="example-card">
+                <div class="item">
+                    <span class="pro-pic">
+                        <a routerLink="/doctor-profile"><img src="../assets/doctor.jpg"></a>
+                    </span>
+                    <span class="title">Dr. Siddharth Kamble</span>
+                    <small>Dentist</small>
+                    <span>795 Folsom Ave, Suite 600 San Francisco, faCADGE 94107</span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3 text-center">
+            <mat-card class="example-card">
+                <div class="item">
+                    <span class="pro-pic">
+                        <a routerLink="/doctor-profile"><img src="../assets/doctor.jpg"></a>
+                    </span>
+                    <span class="title">Dr. Siddharth Kamble</span>
+                    <small>Dentist</small>
+                    <span>795 Folsom Ave, Suite 600 San Francisco, faCADGE 94107</span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3 text-center">
+            <mat-card class="example-card">
+                <div class="item">
+                    <span class="pro-pic">
+                        <a routerLink="/doctor-profile"><img src="../assets/doctor.jpg"></a>
+                    </span>
+                    <span class="title">Dr. Siddharth Kamble</span>
+                    <small>Dentist</small>
+                    <span>795 Folsom Ave, Suite 600 San Francisco, faCADGE 94107</span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3 text-center">
+            <mat-card class="example-card">
+                <div class="item">
+                    <span class="pro-pic">
+                        <a routerLink="/doctor-profile"><img src="../assets/doctor.jpg"></a>
+                    </span>
+                    <span class="title">Dr. Siddharth Kamble</span>
+                    <small>Dentist</small>
+                    <span>795 Folsom Ave, Suite 600 San Francisco, faCADGE 94107</span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3 text-center">
+            <mat-card class="example-card">
+                <div class="item">
+                    <span class="pro-pic">
+                        <a routerLink="/doctor-profile"><img src="../assets/doctor.jpg"></a>
+                    </span>
+                    <span class="title">Dr. Siddharth Kamble</span>
+                    <small>Dentist</small>
+                    <span>795 Folsom Ave, Suite 600 San Francisco, faCADGE 94107</span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-md-3 text-center">
+            <mat-card class="example-card">
+                <div class="item">
+                    <span class="pro-pic">
+                        <a routerLink="/doctor-profile"><img src="../assets/doctor.jpg"></a>
+                    </span>
+                    <span class="title">Dr. Siddharth Kamble</span>
+                    <small>Dentist</small>
+                    <span>795 Folsom Ave, Suite 600 San Francisco, faCADGE 94107</span>
+                </div>
+            </mat-card>
+        </div> -->
+    </div>
+</div>

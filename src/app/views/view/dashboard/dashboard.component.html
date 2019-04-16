@@ -1,0 +1,96 @@
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/dashboard"><mat-icon>home</mat-icon></a></li>
+    <li class="breadcrumb-item active">Dashboard</li>
+</ul>
+
+<div class="container-fluid dashboard">
+
+  <!-- Quick Summary -->
+  
+  
+  <div class="row ">
+    <div class="col-md-12"><h1>Dashboard</h1></div>
+    <div class="col-md-3">
+      <mat-card class="example-card doctor">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <mat-icon>person</mat-icon>
+          </div>
+          <mat-card-title>{{getQuickData.doctorReport}}</mat-card-title>
+          <mat-card-subtitle>Available<br>Doctor</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div class="col-md-3">
+      <mat-card class="example-card operation-report">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <mat-icon>equalizer</mat-icon>
+          </div>
+          <mat-card-title>{{getQuickData.operationReport}}</mat-card-title>
+          <mat-card-subtitle>Operation<br>Report</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div class="col-md-3">
+      <mat-card class="example-card birth-report">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <mat-icon>mood</mat-icon>
+          </div>
+          <mat-card-title>{{getQuickData.birthReport}}</mat-card-title>
+          <mat-card-subtitle>Birth <br>Report</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div class="col-md-3">
+      <mat-card class="example-card death-report">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <mat-icon>airline_seat_individual_suite</mat-icon>
+          </div>
+          <mat-card-title>{{getQuickData.deathReport}}</mat-card-title>
+          <mat-card-subtitle>Death <br>Report</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+
+
+  <!-- Graph Stats -->
+  <div class="Grap md-mt-20">
+    <div class="row top-buffer">
+      <div class="col-md-6">
+        <mat-card class="example-card">
+          <!-- Bar -->
+          <canvas baseChart  [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType">
+          </canvas>
+        </mat-card>
+      </div>
+      <div class="col-md-6">
+        <mat-card class="example-card">
+            <!-- Base -->
+            <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
+        </mat-card>
+      </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-6">
+          <mat-card class="example-card">
+              <!-- Pie Chart-->
+              <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"></canvas>
+          </mat-card>
+        </div>
+        <div class="col-md-6">
+          <mat-card class="example-card">
+              <!-- Line Chart-->
+              <canvas baseChart width="400" height="200" [datasets]="lineChartData" [labels]="lineChartLabels" [colors]="lineChartColors" [chartType]="lineChartType"></canvas>
+          </mat-card>
+        </div>
+      </div>
+      
+
+  </div>
+
+
+</div>

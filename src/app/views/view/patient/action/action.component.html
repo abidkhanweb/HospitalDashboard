@@ -1,0 +1,62 @@
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">
+            <mat-icon>home</mat-icon>
+        </a></li>
+    <li class="breadcrumb-item"><a routerLink="/patients">Patients</a></li>
+    <li class="breadcrumb-item active">Add Patient</li>
+</ul>
+
+
+<div class="container-fluid form mat-card col-md-6 col-sm-12 col-12">
+  <h1 class="d-flex bd-highlight mb-3">
+      <span class="title mr-auto">Add Patient</span>
+  </h1>
+  <!-- Patient Form -->
+  <div class="row">
+    <div class="col-md-6 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Patient ID">
+          </mat-form-field>
+    </div>
+    <div class="col-md-6 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Full Name">
+          </mat-form-field>
+    </div>
+    <div class="col-md-12 form-group">
+        <mat-form-field>
+          <textarea matInput placeholder="Address"></textarea>
+          </mat-form-field>
+    </div>
+    <div class="col-md-6 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Age">
+          </mat-form-field>
+    </div>
+    <div class="col-md-6 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Contact no.">
+          </mat-form-field>
+    </div>
+    <div class="col-md-6 form-group">
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Last visit">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+    
+    <div class="col-md-6 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Status">
+          </mat-form-field>
+    </div>
+  <div class="col-md-12 form-group buttons d-flex  justify-content-end">
+    <button mat-raised-button>Clear</button>
+    <button mat-raised-button color="primary">Submit</button>
+ </div>
+    
+    
+
+  </div>
+</div>

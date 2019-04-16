@@ -1,0 +1,37 @@
+/* Mixin */
+@mixin blur-shadow { content: ''; position: absolute; z-index: -1; width: 90%; height: 70%; bottom: 0; left: 50%; -webkit-filter: blur(10px); filter: blur(10px); border-radius: 10px; background-color: #673ab7; transform: translateX(-50%);}
+
+.sidebar { background-color: #ffffff;}
+.sidebar .mat-card-avatar { background:url'../assets/thumb.jpg';  background-size: 100%;}
+  
+.sidebar-list { color:#000000}
+.sidebar-nav .mat-list-item { margin: 20px 0; }
+.sidebar-nav .mat-list-item .mat-list-item-content { z-index: 1;}
+.sidebar-nav .mat-list-item a { z-index: 1; position: relative; border-radius: 5px; text-decoration: none; display: flex; vertical-align: middle; width: 100%; color:#3c4858; padding: 15px 20px;
+
+  &:before {
+    @include blur-shadow;
+    display: none;
+  }
+  &:hover{
+    background-color: #673ab7;
+    color: #ffffff;
+  }
+  &:hover::before{
+    display: block;
+  }
+  &:hover .mat-icon {
+    color:#ffffff;
+  }
+}
+
+
+
+.sidebar-nav .mat-list-item a .mat-icon { margin-right: 10px; color: #a9afbb}
+.sidebar-nav .mat-list-item a.active {background-color: #673ab7; color: #ffffff; 
+  &::before {
+    @include blur-shadow;
+    display: block;
+  }
+  .mat-icon { color:#ffffff}
+}

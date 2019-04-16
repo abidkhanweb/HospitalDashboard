@@ -1,0 +1,172 @@
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">
+            <mat-icon>home</mat-icon>
+        </a></li>
+    <li class="breadcrumb-item">Billing</li>
+
+</ul>
+<h1>Billing
+    <div class="example-button-row">
+        <a routerLink="/billing-action"><button mat-fab color="primary"
+                aria-label="Example icon-button with a heart icon">
+                <mat-icon>add</mat-icon>
+            </button></a>
+    </div>
+</h1>
+
+
+<div class="container-fluid">
+
+    <!-- Billing List -->
+    <div class="row">
+
+            <div class="col-md-9 form-group">
+                    Show <mat-form-field>
+                        <mat-label>Per Page</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let page of paging" [value]="paging">
+                            {{page}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>  entries
+                </div>
+                <div class="col-md-3 form-group">
+                    Search: 
+                    <mat-form-field>
+                        <input matInput placeholder="">
+                      </mat-form-field>
+                </div>
+
+        <div class="col-md-12">
+            <table class="table m-b-0 table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Bill No</th>
+                        <th>Bill Date</th>
+                        <th>Patient</th>
+                        <th>Doctor</th>
+                        <th>Charges</th>
+                        <th>Tax</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr role="row" class="odd">
+                        <td>KU 00598</td>
+                        <td class="">11</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Christina Bing</td>
+                        <td>Jessica Patterson</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>KU 00258</td>
+                        <td class="">11</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Christina Bing</td>
+                        <td>Jessica Patterson</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td>KU 00369</td>
+                        <td class="">12</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Christina Bing</td>
+                        <td>Juan Freeman</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>KU 00369</td>
+                        <td class="">12</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Christina Bing</td>
+                        <td>Juan Freeman</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td>KU 00147</td>
+                        <td class="">14</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Lori Perkins</td>
+                        <td>Juan Freeman</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>KU 00123</td>
+                        <td class="">14</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Lori Perkins</td>
+                        <td>Juan Freeman</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td>KU 00456</td>
+                        <td class="">15</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Christina Bing</td>
+                        <td>Juan Freeman</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>KU 00789</td>
+                        <td class="">15</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Christina Bing</td>
+                        <td>Juan Freeman</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+                    <tr role="row" class="odd">
+                        <td>KU 00987</td>
+                        <td class="">16</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Christina Bing</td>
+                        <td>Juan Freeman</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+                    <tr role="row" class="even">
+                        <td>KU 00953</td>
+                        <td class="">16</td>
+                        <td class="sorting_1">02/21/2017</td>
+                        <td>Christina Bing</td>
+                        <td>Juan Freeman</td>
+                        <td>102</td>
+                        <td>10</td>
+                        <td>10%</td>
+                        <td>210</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

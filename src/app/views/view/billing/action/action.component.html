@@ -1,0 +1,80 @@
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">
+            <mat-icon>home</mat-icon>
+        </a></li>
+    <li class="breadcrumb-item"><a routerLink="/billing">Billing</a></li>
+    <li class="breadcrumb-item active">Add Billing</li>
+</ul>
+<h1>Add Billing</h1>
+
+<div class="container-fluid">
+
+  <!-- Quick Summary -->
+
+  <div class="row">
+      
+
+    <div class="col-md-3 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Patient ID">
+          </mat-form-field>
+    </div>
+    <div class="col-md-3 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Bill No">
+          </mat-form-field>
+    </div>
+    <div class="col-md-3 form-group">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Appointment Date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div class="col-md-3 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Patient">
+          </mat-form-field>
+    </div>
+    <div class="col-md-3 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Doctor">
+          </mat-form-field>
+    </div>
+    <div class="col-md-3 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Charges">
+          </mat-form-field>
+    </div>
+    <div class="col-md-3 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Tax">
+          </mat-form-field>
+    </div>
+   
+    <div class="col-md-3 form-group">
+        <mat-form-field>
+          <mat-label>Discount</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let discount of paging" [value]="discount">
+              {{discount}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="col-md-3 form-group">
+        <mat-form-field>
+            <input matInput placeholder="Total">
+          </mat-form-field>
+    </div>
+    
+ <div class="col-md-3 col-md-3-push form-group">
+    <button mat-raised-button>Clear</button>
+    <button mat-raised-button color="primary">Submit</button>
+ </div>
+    
+
+
+  </div>
+</div>

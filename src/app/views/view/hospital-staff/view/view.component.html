@@ -1,0 +1,170 @@
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/dashboard">
+            <mat-icon>home</mat-icon>
+        </a></li>
+       
+    <li class="breadcrumb-item active">Hospital Staff</li>
+
+</ul>
+<h1>Hospital Staff
+    <div class="example-button-row">
+        <a routerLink="/hospital-staff-action"><button mat-fab color="primary"
+                aria-label="Example icon-button with a heart icon">
+                <mat-icon>add</mat-icon>
+            </button></a>
+    </div>
+</h1>
+
+
+<div class="container-fluid">
+
+    <!-- Hospital Staff -->
+
+    <div class="row">
+        <div class="col-md-9 form-group">
+            Show <mat-form-field>
+                <mat-label>Per Page</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let page of paging" [value]="paging">
+                        {{page}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field> entries
+        </div>
+        <div class="col-md-3 form-group">
+            Search:
+            <mat-form-field>
+                <input matInput placeholder="">
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-12">
+
+            <table class="table m-b-0 table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Media</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Gender</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Joining Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="list-icon">
+                                <a>
+                                    <img class="patients-img"
+                                        src="http://www.wrraptheme.com/templates/lucid/hospital/assets/images/xs/avatar1.jpg"
+                                        alt="">
+                                </a>
+                            </span>
+                        </td>
+                        <td><span class="list-name">Sarah Smith </span></td>
+                        <td>Nurse</td>
+                        <td>Female</td>
+                        <td>44455546456</td>
+                        <td>sarah@gmail.com</td>
+                        <td>22,tilak appt. surat </td>
+                        <td>05 Jun 1992</td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <span class="list-icon">
+                                    <a>
+                                        <img class="patients-img"
+                                            src="http://www.wrraptheme.com/templates/lucid/hospital/assets/images/xs/avatar1.jpg"
+                                            alt="">
+                                    </a>
+                                </span>
+                            </td>
+                            <td><span class="list-name">Sarah Smith </span></td>
+                            <td>Nurse</td>
+                            <td>Female</td>
+                            <td>44455546456</td>
+                            <td>sarah@gmail.com</td>
+                            <td>22,tilak appt. surat </td>
+                            <td>05 Jun 1992</td>
+                        </tr>
+                        <tr>
+                                <td>
+                                    <span class="list-icon">
+                                        <a>
+                                            <img class="patients-img"
+                                                src="http://www.wrraptheme.com/templates/lucid/hospital/assets/images/xs/avatar1.jpg"
+                                                alt="">
+                                        </a>
+                                    </span>
+                                </td>
+                                <td><span class="list-name">Sarah Smith </span></td>
+                                <td>Nurse</td>
+                                <td>Female</td>
+                                <td>44455546456</td>
+                                <td>sarah@gmail.com</td>
+                                <td>22,tilak appt. surat </td>
+                                <td>05 Jun 1992</td>
+                            </tr>
+                            <tr>
+                                    <td>
+                                        <span class="list-icon">
+                                            <a>
+                                                <img class="patients-img"
+                                                    src="http://www.wrraptheme.com/templates/lucid/hospital/assets/images/xs/avatar1.jpg"
+                                                    alt="">
+                                            </a>
+                                        </span>
+                                    </td>
+                                    <td><span class="list-name">Sarah Smith </span></td>
+                                    <td>Nurse</td>
+                                    <td>Female</td>
+                                    <td>44455546456</td>
+                                    <td>sarah@gmail.com</td>
+                                    <td>22,tilak appt. surat </td>
+                                    <td>05 Jun 1992</td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                            <span class="list-icon">
+                                                <a>
+                                                    <img class="patients-img"
+                                                        src="http://www.wrraptheme.com/templates/lucid/hospital/assets/images/xs/avatar1.jpg"
+                                                        alt="">
+                                                </a>
+                                            </span>
+                                        </td>
+                                        <td><span class="list-name">Sarah Smith </span></td>
+                                        <td>Nurse</td>
+                                        <td>Female</td>
+                                        <td>44455546456</td>
+                                        <td>sarah@gmail.com</td>
+                                        <td>22,tilak appt. surat </td>
+                                        <td>05 Jun 1992</td>
+                                    </tr>
+                                    <tr>
+                                            <td>
+                                                <span class="list-icon">
+                                                    <a>
+                                                        <img class="patients-img"
+                                                            src="http://www.wrraptheme.com/templates/lucid/hospital/assets/images/xs/avatar1.jpg"
+                                                            alt="">
+                                                    </a>
+                                                </span>
+                                            </td>
+                                            <td><span class="list-name">Sarah Smith </span></td>
+                                            <td>Nurse</td>
+                                            <td>Female</td>
+                                            <td>44455546456</td>
+                                            <td>sarah@gmail.com</td>
+                                            <td>22,tilak appt. surat </td>
+                                            <td>05 Jun 1992</td>
+                                        </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
