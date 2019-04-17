@@ -8,6 +8,8 @@ $heading-color:#3c4858;
 $transparent:transparent;
 $font-light:100;
 $hundred-pcnt:100%;
+$flex:flex;
+$col-white:#ffffff;
 
 body,html,.app-root,.main,.main-content { height: $hundred-pcnt;}
 
@@ -49,12 +51,19 @@ h1 { font-size:30px; line-height:35px;}
 
 /* Forms */
 .form .mat-form-field { width:$hundred-pcnt;}
-.form .buttons { display: flex;}
+.form .buttons { display: $flex;}
 .form .buttons button  { margin:0 5px;}
 .form .buttons button:last-child { margin-right: 0;}
 
+/* Report */
+.report { @extend .dashboard }
+.report .mat-card .mat-card-title { color: $col-white; font-size: 30px; margin-top: 5px;}
+.report .mat-card .mat-card-subtitle { color:$col-white; font-size: 17px; font-weight: $font-light; margin-top: 5px;}
+.report .mat-card-avatar { background-color: rgba(0,0,0,0.20);}
+
+
 /* Footer */
-.footer { padding:20px 0 0 ; display:flex; font-size:14px;}
+.footer { padding:20px 0 0; display:flex; font-size:14px;}
 
 
 
