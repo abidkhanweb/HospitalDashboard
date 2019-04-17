@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppointmentActionComponent implements OnInit {
 
-  constructor() { }
+  constructor(){}
   public genders:any =  ['Male','Female'];
   public services:any =  ['Dental Checkup','Full Body Checkup','ENT Checkup','Heart Checkup'];
+  public status:any = ['Approved','Pending'];
   ngOnInit() {
   }
 

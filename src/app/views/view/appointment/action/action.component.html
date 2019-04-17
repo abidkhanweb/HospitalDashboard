@@ -5,29 +5,31 @@
     <li class="breadcrumb-item"><a routerLink="/appointment">Appointment</a></li>
     <li class="breadcrumb-item active">Add Appointment </li>
 </ul>
-<h1>Add Appointment</h1>
 
-<div class="container-fluid">
+<div class="container-fluid form mat-card col-md-6 col-sm-12 col-12">
 
-  <!-- Quick Summary -->
+  <!-- Add Appointment -->
+  <h1 class="d-flex bd-highlight mb-3">
+      <span class="title mr-auto">Add Appointment</span>
+  </h1>
 
   <div class="row">
-    <div class="col-md-3 form-group">
+    <div class="col-md-6 form-group">
         <mat-form-field>
             <input matInput placeholder="Patient ID">
           </mat-form-field>
     </div>
-    <div class="col-md-3 form-group">
+    <div class="col-md-6 form-group">
         <mat-form-field>
             <input matInput placeholder="Full Name">
           </mat-form-field>
     </div>
-    <div class="col-md-3 form-group">
+    <div class="col-md-6 form-group">
         <mat-form-field>
             <input matInput placeholder="Age">
           </mat-form-field>
     </div>
-    <div class="col-md-3 form-group">
+    <div class="col-md-6 form-group">
         <mat-form-field>
           <mat-label>Gender</mat-label>
           <mat-select>
@@ -37,28 +39,29 @@
           </mat-select>
         </mat-form-field>
     </div>
-    <div class="col-md-3 form-group">
+    <div class="col-md-6 form-group">
         <mat-form-field>
             <input matInput placeholder="Contact">
           </mat-form-field>
     </div>
-    <div class="col-md-3 form-group">
-        <mat-form-field>
-            <input matInput placeholder="Address">
-          </mat-form-field>
-    </div>
-    <div class="col-md-3 form-group">
+    <div class="col-md-6 form-group">
         <mat-form-field>
           <mat-label>Service</mat-label>
           <mat-select>
-            <mat-option *ngFor="let service of services" [value]="Service">
+            <mat-option *ngFor="let service of services" [value]="services">
               {{service}}
             </mat-option>
           </mat-select>
         </mat-form-field>
     </div>
+    <div class="col-md-12 form-group">
+        <mat-form-field>
+            <textarea matInput placeholder="Address"></textarea>
+          </mat-form-field>
+    </div>
     
-    <div class="col-md-3 form-group">
+    
+    <div class="col-md-6 form-group">
         <mat-form-field>
           <input matInput [matDatepicker]="picker" placeholder="Appointment Date">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -66,18 +69,23 @@
         </mat-form-field>
     </div>
     
-    <div class="col-md-3 form-group">
+    <div class="col-md-6 form-group">
         <mat-form-field>
-            <input matInput placeholder="Detail">
-          </mat-form-field>
+          <mat-label>Status</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let thisStatus of status" [value]="status">
+              {{thisStatus}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
     </div>
-    <div class="col-md-3 form-group">
-        <mat-form-field>
-            <input matInput placeholder="Status">
-          </mat-form-field>
-    </div>
+    <div class="col-md-12 form-group">
+      <mat-form-field>
+          <textarea matInput placeholder="Detail"></textarea>
+        </mat-form-field>
+  </div>
     
- <div class="col-md-3 col-md-3-push form-group">
+    <div class="col-md-12 form-group buttons d-flex  justify-content-end">
     <button mat-raised-button>Clear</button>
     <button mat-raised-button color="primary">Submit</button>
  </div>
