@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
 
@@ -59,6 +59,7 @@ import { DashboardService } from './view/dashboard/shared.service';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     MaterialModule,
     ChartsModule,

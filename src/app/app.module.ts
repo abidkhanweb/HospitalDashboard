@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // Custom Module and Service
@@ -25,6 +25,7 @@ import { DoctorService } from './views/view/doctor/shared.service';
 import { PatientService } from './views/view/patient/shared.service';
 import { AppointmentService } from './views/view/appointment/shared.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,8 @@ import { AppointmentService } from './views/view/appointment/shared.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
     ViewsModule,

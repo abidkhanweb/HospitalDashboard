@@ -1,9 +1,9 @@
 <ul class="breadcrumb">
-    <li class="breadcrumb-item"><a routerLink="/dashboard">
-            <mat-icon>home</mat-icon>
-        </a></li>
-    <li class="breadcrumb-item"><a routerLink="/doctors">Doctors</a></li>
-    <li class="breadcrumb-item active">Add Doctor</li>
+  <li class="breadcrumb-item"><a routerLink="/dashboard">
+      <mat-icon>home</mat-icon>
+    </a></li>
+  <li class="breadcrumb-item"><a routerLink="/doctors">Doctors</a></li>
+  <li class="breadcrumb-item active">Add Doctor</li>
 </ul>
 <h1></h1>
 
@@ -12,63 +12,68 @@
   <!-- Quick Summary -->
 
   <h1 class="d-flex bd-highlight mb-3">
-      <span class="title mr-auto">Add Doctor</span>
+    <span class="title mr-auto">Add Doctor</span>
   </h1>
-
+  <form #doctorForm="ngForm" (ngSubmit)="submitForm(doctorForm.value)" novalidate>
   <div class="row">
-    <div class="col-md-6 form-group">
-        <mat-form-field>
-            <input matInput placeholder="First name">
-          </mat-form-field>
-    </div>
-    <div class="col-md-6 form-group">
-        <mat-form-field>
-            <input matInput placeholder="Last name">
-          </mat-form-field>
-    </div>
-    <div class="col-md-6 form-group">
-        <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="Date of birth">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-    </div>
-    <div class="col-md-6 form-group">
-        <mat-form-field>
-            <mat-label>Gender</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let gender of genders" [value]="gender">
-                {{gender}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-    </div>
-    <div class="col-md-6 form-group">
-        <mat-form-field>
-            <input matInput placeholder="Speaciality">
-          </mat-form-field>
-    </div>
-    <div class="col-md-6 form-group">
-        <mat-form-field>
-            <input matInput placeholder="Phone number">
-          </mat-form-field>
-    </div>
-    <div class="col-md-6 form-group">
-        <mat-form-field>
-            <input matInput placeholder="Email">
-          </mat-form-field>
-    </div>
-    <div class="col-md-6 form-group">
-        <mat-form-field>
-            <input matInput placeholder="Website URL">
-          </mat-form-field>
-    </div>
- <div class="col-md-12 form-group buttons d-flex  justify-content-end">
-    <button mat-raised-button>Clear</button>
-    <button mat-raised-button color="primary">Submit</button>
- </div>
-    
     
 
-  </div>
+
+      <div class="col-md-6 form-group">
+        <mat-form-field>
+          <input matInput placeholder="First name" #firstName="ngModel" minlength="3" maxlength="10" name="firstName" ngModel required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field>
+          <input matInput placeholder="Last name" #lastName="ngModel" minlength="3" maxlength="10" name="lastName" ngModel required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Date of birth" #dob="ngModel" minlength="3" maxlength="10" name="dob" ngModel required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field>
+          <mat-label>Gender</mat-label>
+          <mat-select  #gender="ngModel" minlength="3" maxlength="10" name="gender" ngModel required>
+            <mat-option *ngFor="let gender of genders" [value]="gender">
+              {{gender}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field>
+          <input matInput placeholder="Speaciality" #speaciality="ngModel" minlength="3" maxlength="10" name="speaciality" ngModel required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field>
+          <input matInput placeholder="Phone number" #number="ngModel" minlength="10" maxlength="15" name="Phone number" ngModel required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field>
+          <input matInput placeholder="Email" #email="ngModel" minlength="5" maxlength="15" name="Email" ngModel required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field>
+          <input matInput placeholder="Website URL" #url="ngModel" minlength="10" maxlength="15" name="Website URL" ngModel required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-12 form-group buttons d-flex  justify-content-end">
+        <button mat-raised-button>Clear</button>
+        <button mat-raised-button color="primary" [disabled]="!doctorForm.valid">Submit</button>
+      </div>
+
+   
+
+
+
+  </div> </form>
 </div>

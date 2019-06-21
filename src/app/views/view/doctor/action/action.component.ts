@@ -13,9 +13,14 @@ export class DoctorActionComponent implements OnInit {
   
   public genders:any =  ['Male','Female'];
 
+  submitForm(values:any){
+    console.log(values);
+  }
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

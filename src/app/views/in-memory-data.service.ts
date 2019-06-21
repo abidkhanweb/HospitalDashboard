@@ -22,11 +22,11 @@ export class DataService implements InMemoryDbService {
 
         // Doctors
         let doctorsData = [
-            { id:1, thumb:'../assets/doctors/siddharth.jpg', name:'Siddharth Kamble', specialist:'Neurology', address:'Mumbai'},
-            { id:2, thumb:'../assets/doctors/arvind.jpg', name:'Arvind Ghadge', specialist:'Gynecologist', address:'Thane'},
-            { id:3, thumb:'../assets/doctors/madhavi.jpg', name:'Madhavi Gawari', specialist:'Dentist', address:'Mumbai'},
-            { id:4, thumb:'../assets/doctors/manisha.jpg', name:'Manisha Singla', specialist:'Audiology', address:'Mumbai'},
-            { id:5, thumb:'../assets/doctors/darshan.jpg', name:'Darshan Raul', specialist:'Neurosurgeon', address:'Mumbai'},
+            { id:1, thumb:'https://i.ibb.co/KDDdNBX/siddharth.jpg', name:'Siddharth Kamble', specialist:'Neurology', address:'Mumbai'},
+            { id:2, thumb:'https://i.ibb.co/Wzs53Qy/arvind.jpg', name:'Arvind Ghadge', specialist:'Gynecologist', address:'Thane'},
+            { id:3, thumb:'https://i.ibb.co/YyBrh5g/madhavi.jpg', name:'Madhavi Gawari', specialist:'Dentist', address:'Mumbai'},
+            { id:4, thumb:'https://i.ibb.co/kMWRgnV/manisha.jpg', name:'Manisha Singla', specialist:'Audiology', address:'Mumbai'},
+            { id:5, thumb:'https://i.ibb.co/SQpqPT6/darshan.jpg', name:'Darshan Raul', specialist:'Neurosurgeon', address:'Mumbai'},
         ];
 
         // Patient
